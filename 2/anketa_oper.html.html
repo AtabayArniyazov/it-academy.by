@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание №1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var fullName = prompt("Ваше фамилия, имя, отчество РАЗДЕЛЬНО");
+		var age = prompt("Сколько Вам лет?");
+		var gender = confirm("Ваш пол - мужской?");
+		var pensionableAge;
+		var pensionableAgeMale = "нет"; //пенсионный возраст для женщин - 58, для мужчин - 63
+		var pensionableAgeFemale = "нет"; //пенсионный возраст для женщин - 58, для мужчин - 63
+
+		gender ? gender = "мужской" : gender = "женский"
+
+		age >= 58 && gender === "женский" ? pensionableAgeFemale = "да" : pensionableAgeFemale = "нет"
+
+		age >= 63 && gender === "мужской" ? pensionableAgeMale = "да" : pensionableAgeMale = "нет"
+
+		gender === "мужской" ? pensionableAge = pensionableAgeMale : pensionableAge = pensionableAgeFemale
+
+		alert("ФИО: " + fullName + "\nвозраст, лет: " + age + "\nвозраст, дней: " + (age * 365) + "\nпол: " + gender + "\nпенсионный возраст: " + pensionableAge);
+
+	</script>
+</body>
+</html>
